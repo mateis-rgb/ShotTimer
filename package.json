@@ -5,7 +5,9 @@
   "description": "Shot Timer pour airsoft",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cordova run browser",
+    "dev": "cordova emulate ios",
+    "build": "cordova build ios"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -13,11 +15,19 @@
   "author": "Mateis",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-ios": "^6.3.0"
+    "cordova-browser": "^6.0.0",
+    "cordova-ios": "^6.3.0",
+    "cordova-plugin-file": "^7.0.0",
+    "cordova-plugin-media-capture": "^4.0.0"
   },
   "cordova": {
     "platforms": [
-      "ios"
-    ]
+      "ios",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-media-capture": {},
+      "cordova-plugin-file": {}
+    }
   }
 }
